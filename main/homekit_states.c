@@ -17,8 +17,7 @@ static char *garagedoor_target_states[] = {
     "close"
 };
 
-static char *contact_state[] =
-{
+static char *contact_state[] = {
     "contact detected",
     "contact not detected"
 };
@@ -31,10 +30,8 @@ static char *contact_state[] =
  * @return string to the name of the status
  */
 
-char *garagedoor_current_state_string(uint8_t state)
-{
-    if (state>CURRENT_STATE_STOPPED)
-    {
+char *garagedoor_current_state_string(uint8_t state) {
+    if (state > CURRENT_STATE_STOPPED) {
         state = CURRENT_STATE_OPEN;
     }
     return (garagedoor_current_states[state]);
@@ -48,10 +45,8 @@ char *garagedoor_current_state_string(uint8_t state)
  * @return string to the name of the status
  */
 
-char *garagedoor_target_state_string(uint8_t state)
-{
-    if (state>TARGET_STATE_CLOSED)
-    {
+char *garagedoor_target_state_string(uint8_t state) {
+    if (state > TARGET_STATE_CLOSED) {
         state = TARGET_STATE_CLOSED;
     }
     return (garagedoor_target_states[state]);
@@ -65,10 +60,8 @@ char *garagedoor_target_state_string(uint8_t state)
  * @return string to the name of the status
  */
 
-char *contact_state_string(uint8_t state)
-{
-    if (state>CONTACT_NOT_DETECTED)
-    {
+char *contact_state_string(uint8_t state) {
+    if (state > CONTACT_NOT_DETECTED) {
         state = CONTACT_NOT_DETECTED;
     }
     return (contact_state[state]);
